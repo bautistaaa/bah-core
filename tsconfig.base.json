@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bah-core/ui": ["libs/ui/src/index.ts"],
+      "@bah-core/ui/button": ["libs/ui/button/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
