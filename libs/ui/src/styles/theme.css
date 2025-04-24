@@ -1,0 +1,4 @@
+@theme {
+  --color-primary: var(--color-primary-base);
+  --color-secondary: var(--color-secondary-base);
+}

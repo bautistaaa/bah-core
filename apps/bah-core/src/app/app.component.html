@@ -1,3 +1,31 @@
-<lib-button />
-<app-nx-welcome />
+<div class="p-8 space-y-4">
+  <h1 class="text-3xl font-bold mb-6">Button Examples</h1>
+  
+  <div class="space-y-2">
+    <h2 class="text-xl font-semibold text-primary">Variants</h2>
+    <div class="flex gap-4">
+      <lib-button>Primary</lib-button>
+      <lib-button variant="secondary">Secondary</lib-button>
+      <lib-button variant="tertiary">Tertiary</lib-button>
+    </div>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="text-xl font-semibold">Sizes</h2>
+    <div class="flex gap-4 items-center">
+      <lib-button size="sm">Small</lib-button>
+      <lib-button size="md">Medium</lib-button>
+      <lib-button size="lg">Large</lib-button>
+    </div>
+  </div>
+
+  <div class="space-y-2">
+    <h2 class="text-xl font-semibold">States</h2>
+    <div class="flex gap-4">
+      <lib-button [disabled]="true">Disabled</lib-button>
+      <lib-button (clicked)="handleClick()">Click Me</lib-button>
+    </div>
+  </div>
+</div>
+
 <router-outlet></router-outlet>
