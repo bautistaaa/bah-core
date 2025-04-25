@@ -78,6 +78,18 @@
         "testStorybookTargetName": "test-storybook",
         "staticStorybookTargetName": "static-storybook"
       }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "tsc:build",
+          "configName": "tsconfig.lib.json"
+        }
+      }
     }
   ],
   "generators": {
@@ -93,6 +105,12 @@
     },
     "@nx/angular:component": {
       "style": "css"
+    }
+  },
+  "release": {
+    "projects": ["ui"],
+    "version": {
+      "preVersionCommand": "npx nx run-many -t build"
     }
   }
 }
