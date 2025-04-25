@@ -1,5 +1,5 @@
 {
-  "name": "@bah-core/ui",
+  "name": "@trash-bin/ui",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^18.2.0",

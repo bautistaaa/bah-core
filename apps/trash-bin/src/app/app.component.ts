@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '@bah-core/ui/button';
+import { ButtonComponent } from '@trash-bin/ui/button';
 
 @Component({
   standalone: true,
@@ -10,7 +10,7 @@ import { ButtonComponent } from '@bah-core/ui/button';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'bah-core';
+  title = 'trash-bin';
   isLoading = false;
 
   handleClick(): void {
