@@ -55,6 +55,11 @@
     },
     "build-storybook": {
       "cache": true
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/libs/{projectName}"
+      }
     }
   },
   "plugins": [

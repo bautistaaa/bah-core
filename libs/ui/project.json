@@ -29,7 +29,7 @@
     },
     "build": {
       "executor": "nx:run-commands",
-      "outputs": ["{workspaceRoot}/dist/libs/ui"],
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "configurations": {
         "production": {
           "commands": ["rm -rf dist/libs/ui", "nx run ui:build-lib:production"],
