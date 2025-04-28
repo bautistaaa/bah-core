@@ -1,4 +1,9 @@
+@theme {
+  --font-sans: InterVariable, sans-serif;
+}
 @theme inline {
   --color-primary: var(--color-primary-base);
+  --color-primary-hover: var(--color-primary-base-hover);
+
   --color-secondary: var(--color-secondary-base);
 }
