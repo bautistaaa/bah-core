@@ -1,0 +1,106 @@
+<header
+  class="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+>
+  <div class="container-wrapper">
+    <div class="container flex h-14 items-center gap-2 md:gap-4">
+      <div class="mr-4 hidden md:flex">
+        <a class="mr-4 flex items-center gap-2 lg:mr-6" href="/"
+          ><span class="hidden font-bold lg:inline-block">trash/ui</span></a
+        >
+        <nav class="flex items-center gap-4 text-sm xl:gap-6">
+          <a
+            class="transition-colors hover:text-foreground/80 text-foreground/80"
+            href="/docs/installation"
+            >Docs</a
+          ><a
+            class="transition-colors hover:text-foreground/80 text-foreground"
+            href="/docs/components"
+            >Components</a
+          ><a
+            class="transition-colors hover:text-foreground/80 text-foreground/80"
+            href="/themes"
+            >Themes</a
+          ><a
+            class="transition-colors hover:text-foreground/80 text-foreground/80"
+            href="/colors"
+            >Colors</a
+          >
+        </nav>
+      </div>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground py-2 h-8 w-full gap-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+        type="button"
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="radix-:R15u6ja:"
+        data-state="closed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="!size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 9h16.5m-16.5 6.75h16.5"
+          ></path></svg
+        ><span class="sr-only">Toggle Menu</span
+        ><span
+          class="flex h-8 flex-1 items-center justify-between rounded-md border bg-muted/50 px-2 text-sm font-normal text-muted-foreground shadow-none"
+          >Search documentation...</span
+        >
+      </button>
+      <div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
+        <div class="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+          <button
+            class="inline-flex items-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-[0.5rem] bg-muted/50 text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-56 xl:w-64"
+          >
+            <span class="hidden lg:inline-flex">Search documentation...</span
+            ><span class="inline-flex lg:hidden">Search...</span
+            ><kbd
+              class="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex"
+              ><span class="text-xs">⌘</span>K</kbd
+            >
+          </button>
+        </div>
+        <div>
+          <button
+            (click)="toggleTheme()"
+            type="button"
+            class="cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+          >
+            <svg
+              class="w-5 h-5"
+              [ngClass]="{ hidden: !isDark }"
+              fill="white"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon"
+              class="w-5 h-5"
+              [ngClass]="{ hidden: isDark }"
+              fill="black"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

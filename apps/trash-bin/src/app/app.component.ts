@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '@trash-bin/ui/button';
+import { NavigationComponent } from '../lib/navigation/navigation.component';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, ButtonComponent],
+  imports: [RouterModule, ButtonComponent, NavigationComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

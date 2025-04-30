@@ -1,7 +1,12 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @import './theme.css';
 
 :root {
+  --color-background: white;
+
   --color-primary-base: #114ff8;
   --color-primary-base-hover: #0d3bba;
 
@@ -14,16 +19,16 @@
   --color-warning-base: #fff9e5;
   --color-info-base: #e6edff;
 }
-
 :root {
   @variant dark {
+    --color-background: #020a4c;
     --color-primary-base: #42e3e8;
-    --color-primary-base-hover: #affdff;
-
     --color-danger-base: #ff5857;
-    --color-danger-base-hover: #ff9c9b;
-
     --color-success-base: #31cc98;
-    --color-success-base-hover: #a3f0d6;
+    @variant hover {
+      --color-primary-base-hover: #affdff;
+      --color-danger-base-hover: #ff9c9b;
+      --color-success-base-hover: #a3f0d6;
+    }
   }
 }
