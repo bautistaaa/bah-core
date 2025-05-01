@@ -1,3 +1,18 @@
 import { Route } from '@angular/router';
+import { IntroductionComponent } from './pages/introduction/introduction.component';
+import { InstallationComponent } from './pages/installation/installation.component';
+import { ThemingComponent } from './pages/theming/theming.component';
+import { ButtonDocsComponent } from './pages/components/button/button.component';
 
-export const appRoutes: Route[] = [];
+export const appRoutes: Route[] = [
+  {
+    path: 'docs',
+    children: [
+      { path: '', component: IntroductionComponent },
+      { path: 'installation', component: InstallationComponent },
+      { path: 'theming', component: ThemingComponent },
+      { path: 'components/button', component: ButtonDocsComponent },
+    ],
+  },
+  { path: '', redirectTo: '/docs', pathMatch: 'full' },
+];

@@ -17,21 +17,18 @@
                 <div class="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
                   <a
                     class="group relative flex h-8 w-full items-center rounded-lg px-2 after:absolute after:inset-x-0 after:inset-y-[-2px] after:rounded-lg hover:bg-accent hover:text-accent-foreground bg-accent font-medium text-accent-foreground"
-                    target=""
-                    rel=""
-                    href="/docs"
+                    routerLink="/docs"
+                    routerLinkActive="bg-accent font-medium text-accent-foreground"
                     >Introduction</a
                   ><a
                     class="group relative flex h-8 w-full items-center rounded-lg px-2 after:absolute after:inset-x-0 after:inset-y-[-2px] after:rounded-lg hover:bg-accent hover:text-accent-foreground font-normal text-foreground"
-                    target=""
-                    rel=""
-                    href="/docs/installation"
+                    routerLink="/docs/installation"
+                    routerLinkActive="bg-accent font-medium text-accent-foreground"
                     >Installation</a
                   ><a
                     class="group relative flex h-8 w-full items-center rounded-lg px-2 after:absolute after:inset-x-0 after:inset-y-[-2px] after:rounded-lg hover:bg-accent hover:text-accent-foreground font-normal text-foreground"
-                    target=""
-                    rel=""
-                    href="/docs/theming"
+                    routerLink="/docs/theming"
+                    routerLinkActive="bg-accent font-medium text-accent-foreground"
                     >Theming</a
                   >
                 </div>
@@ -44,9 +41,8 @@
                 <div class="grid grid-flow-row auto-rows-max gap-0.5 text-sm">
                   <a
                     class="group relative flex h-8 w-full items-center rounded-lg px-2 after:absolute after:inset-x-0 after:inset-y-[-2px] after:rounded-lg hover:bg-accent hover:text-accent-foreground font-normal text-foreground"
-                    target=""
-                    rel=""
-                    href="/docs/components/accordion"
+                    routerLink="/docs/components/button"
+                    routerLinkActive="bg-accent font-medium text-accent-foreground"
                     >Button</a
                   >
                 </div>
@@ -57,8 +53,8 @@
         <main
           class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]"
         >
-          <div class="mx-auto w-full min-w-0 max-w-2xl bg-primary">
-            MAIN CONTENT HERE
+          <div class="mx-auto w-full min-w-0 max-w-2xl">
+            <router-outlet></router-outlet>
           </div>
         </main>
       </div>
