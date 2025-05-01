@@ -3,13 +3,9 @@
 @import '../../../libs/ui/src/styles/base.css';
 
 .container-wrapper {
-  @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl min-[1400px]:border-x border-red-600 dark:border-blue-600 mx-auto w-full border-dashed;
+  @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl mx-auto w-full;
 }
 
 .container {
   @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
-}
-
-.border-grid {
-  @apply border-gray-200/70 dark:border-gray-800/70 border-dashed;
 }

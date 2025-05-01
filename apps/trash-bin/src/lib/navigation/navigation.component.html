@@ -1,5 +1,5 @@
 <header
-  class="border-grid sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+  class="sticky top-0 z-50 w-full border-b border-gray-200/70 dark:border-gray-800/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
 >
   <div class="container-wrapper">
     <div class="container flex h-14 items-center gap-2 md:gap-4">
@@ -28,7 +28,7 @@
         </nav>
       </div>
       <button
-        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground py-2 h-8 w-full gap-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring- disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:text-accent-foreground py-2 h-8 w-full gap-4 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         type="button"
         aria-haspopup="dialog"
         aria-expanded="false"
@@ -71,10 +71,10 @@
           <button
             (click)="toggleTheme()"
             type="button"
-            class="cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+            class="cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-700 focus:outline-none rounded-lg text-sm p-2.5"
           >
             <svg
-              class="w-5 h-5"
+              class="w-4 h-4"
               [ngClass]="{ hidden: !isDark }"
               fill="white"
               viewBox="0 0 20 20"
@@ -86,7 +86,7 @@
             </svg>
             <svg
               id="theme-toggle-light-icon"
-              class="w-5 h-5"
+              class="w-4 h-4"
               [ngClass]="{ hidden: isDark }"
               fill="black"
               viewBox="0 0 20 20"
