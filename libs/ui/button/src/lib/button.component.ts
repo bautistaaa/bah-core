@@ -19,6 +19,10 @@ const SIZE_CLASSES: Record<ButtonSize, string> = {
 const BASE_CLASSES =
   'inline-flex items-center justify-center rounded-md font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 transition-colors' as const;
 
+/**
+ * this is just a POC for the button component
+ * it is not production ready and should not be used as is
+ */
 @Component({
   selector: 'lib-button',
   standalone: true,

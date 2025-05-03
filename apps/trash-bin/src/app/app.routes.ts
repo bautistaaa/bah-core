@@ -3,6 +3,7 @@ import { IntroductionComponent } from './pages/introduction/introduction.compone
 import { InstallationComponent } from './pages/installation/installation.component';
 import { ThemingComponent } from './pages/theming/theming.component';
 import { ButtonDocsComponent } from './pages/components/button/button.component';
+import { ToggleDocsComponent } from './pages/components/toggle/toggle.component';
 
 export const appRoutes: Route[] = [
   {
@@ -12,6 +13,7 @@ export const appRoutes: Route[] = [
       { path: 'installation', component: InstallationComponent },
       { path: 'theming', component: ThemingComponent },
       { path: 'components/button', component: ButtonDocsComponent },
+      { path: 'components/toggle', component: ToggleDocsComponent },
     ],
   },
   { path: '', redirectTo: '/docs', pathMatch: 'full' },

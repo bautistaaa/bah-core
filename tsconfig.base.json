@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@trash-bin/ui": ["libs/ui/src/index.ts"],
-      "@trash-bin/ui/button": ["libs/ui/button/src/index.ts"]
+      "@trash-bin/ui/button": ["libs/ui/button/src/index.ts"],
+      "@trash-bin/ui/toggle": ["libs/ui/toggle/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
