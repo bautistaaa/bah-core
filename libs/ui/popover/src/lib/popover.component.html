@@ -1,0 +1,26 @@
+<div class="relative inline-block">
+  <div
+    #trigger
+    [class]="'cursor-pointer ' + triggerClass"
+    (click)="toggle()"
+    (keydown.enter)="toggle()"
+    (keydown.space)="toggle()"
+    tabindex="0"
+    role="button"
+  >
+    <ng-content select="[popoverTrigger]"></ng-content>
+  </div>
+
+  @if (open()) {
+  <div
+    #popoverContent
+    class="fixed z-50 min-w-[8rem] max-w-[96vw] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md"
+    [class]="contentClass"
+    [style]="popoverStyles()"
+    [@popoverAnimation]
+    role="tooltip"
+  >
+    <ng-content select="[popoverContent]"></ng-content>
+  </div>
+  }
+</div>

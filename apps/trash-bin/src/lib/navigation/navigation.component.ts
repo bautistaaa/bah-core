@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -9,12 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class NavigationComponent implements OnInit {
   isDark = false;
+  private document = inject(DOCUMENT);
 
   ngOnInit() {
     this.isDark =
       localStorage.getItem('theme') === 'dark' ||
       (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches);
+        (this.document.defaultView?.matchMedia('(prefers-color-scheme: dark)').matches ?? false));
     this.updateTheme();
   }
 
@@ -26,11 +28,11 @@ export class NavigationComponent implements OnInit {
 
   private updateTheme(): void {
     if (this.isDark) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.style.colorScheme = 'dark';
+      this.document.documentElement.classList.add('dark');
+      this.document.documentElement.style.colorScheme = 'dark';
     } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.style.colorScheme = 'light';
+      this.document.documentElement.classList.remove('dark');
+      this.document.documentElement.style.colorScheme = 'light';
     }
   }
 }
