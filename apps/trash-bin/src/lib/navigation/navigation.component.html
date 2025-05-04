@@ -75,7 +75,7 @@
           >
             <svg
               class="w-4 h-4"
-              [ngClass]="{ hidden: !isDark }"
+              [ngClass]="{ hidden: themeService.theme() !== 'dark' }"
               fill="white"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@
             <svg
               id="theme-toggle-light-icon"
               class="w-4 h-4"
-              [ngClass]="{ hidden: isDark }"
+              [ngClass]="{ hidden: themeService.theme() === 'dark' }"
               fill="black"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
