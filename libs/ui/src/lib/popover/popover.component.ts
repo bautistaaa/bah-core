@@ -1,4 +1,11 @@
-import { Component, ContentChild, Directive, ElementRef, Input, TemplateRef } from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  Directive,
+  ElementRef,
+  TemplateRef,
+  AfterViewInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Directive({
@@ -20,22 +27,24 @@ export class PopoverContentDirective {
 @Component({
   selector: 'lib-popover',
   standalone: true,
-  imports: [CommonModule, PopoverTriggerDirective, PopoverContentDirective],
+  imports: [CommonModule],
   template: `
     <div class="relative inline-block">
       <ng-content select="[libPopoverTrigger]"></ng-content>
       <div
         *ngIf="isOpen"
-        class="absolute z-50 mt-2 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none"
-        [style.top.px]="triggerElement?.getBoundingClientRect()?.bottom + 8"
-        [style.left.px]="triggerElement?.getBoundingClientRect()?.left"
+        class="absolute z-50 mt-2 rounded-md border shadow-md outline-none"
+        [style.top.px]="
+          (triggerElement?.getBoundingClientRect()?.bottom ?? 0) + 8
+        "
+        [style.left.px]="triggerElement?.getBoundingClientRect()?.left ?? 0"
       >
         <ng-content select="[libPopoverContent]"></ng-content>
       </div>
     </div>
   `,
 })
-export class PopoverComponent {
+export class PopoverComponent implements AfterViewInit {
   @ContentChild(PopoverTriggerDirective) trigger!: PopoverTriggerDirective;
   @ContentChild(PopoverContentDirective) content!: PopoverContentDirective;
 
@@ -45,11 +54,13 @@ export class PopoverComponent {
   ngAfterViewInit() {
     if (this.trigger?.elementRef?.nativeElement) {
       this.triggerElement = this.trigger.elementRef.nativeElement;
-      this.triggerElement.addEventListener('click', () => this.toggle());
+      if (this.triggerElement) {
+        this.triggerElement.addEventListener('click', () => this.toggle());
+      }
     }
   }
 
   toggle() {
     this.isOpen = !this.isOpen;
   }
-} 
+}

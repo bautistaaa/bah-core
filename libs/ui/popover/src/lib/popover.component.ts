@@ -47,6 +47,10 @@ type Side = 'top' | 'right' | 'bottom' | 'left';
     ]),
   ],
 })
+/**
+ * this is just a POC for the popover component
+ * it is not production ready and should not be used as is
+ */
 export class PopoverComponent {
   @Input() position: Position = 'bottom';
   @Input() contentClass = '';

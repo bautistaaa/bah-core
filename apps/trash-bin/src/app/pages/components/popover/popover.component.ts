@@ -7,7 +7,7 @@ import { PopoverComponent } from '@trash-bin/ui/popover';
   template: `
     <lib-popover position="bottom">
       <!-- Trigger element with popoverTrigger directive -->
-      <button popoverTrigger>Click me</button>
+      <button popoverTrigger class="cursor-pointer">Click me</button>
 
       <!-- Content with popoverContent directive -->
       <div popoverContent class="p-4">Your popover content here</div>

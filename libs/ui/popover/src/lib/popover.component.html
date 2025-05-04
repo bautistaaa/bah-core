@@ -1,7 +1,7 @@
 <div class="relative inline-block">
   <div
     #trigger
-    [class]="'cursor-pointer ' + triggerClass"
+    [class]="triggerClass"
     (click)="toggle()"
     (keydown.enter)="toggle()"
     (keydown.space)="toggle()"
@@ -14,7 +14,7 @@
   @if (open()) {
   <div
     #popoverContent
-    class="fixed z-50 min-w-[8rem] max-w-[96vw] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md"
+    class="fixed z-50 min-w-[8rem] max-w-[96vw] overflow-hidden rounded-md border shadow-md"
     [class]="contentClass"
     [style]="popoverStyles()"
     [@popoverAnimation]
