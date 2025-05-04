@@ -1,12 +1,13 @@
 <!-- Enabled: "bg-primary", Not Enabled: "bg-gray-200 dark:bg-gray-700" -->
 <button
   type="button"
-  [class]="'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-hidden ' + additionalClasses"
-  [class.bg-primary]="checked"
-  [class.bg-gray-200]="!checked"
-  [class.dark:bg-gray-700]="!checked"
-  [class.cursor-not-allowed]="disabled"
-  [class.opacity-50]="disabled"
+  [ngClass]="{
+    'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 focus:outline-hidden': true,
+    'bg-primary': checked,
+    'bg-gray-200 dark:bg-gray-700': !checked,
+    'cursor-not-allowed opacity-50': disabled
+  }"
+  [class]="additionalClasses"
   role="switch"
   [attr.aria-checked]="checked"
   [attr.aria-disabled]="disabled"
@@ -17,8 +18,10 @@
   <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
   <span
     aria-hidden="true"
-    class="pointer-events-none inline-block size-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out"
-    [class.translate-x-5]="checked"
-    [class.translate-x-0]="!checked"
+    [ngClass]="{
+      'pointer-events-none inline-block size-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out': true,
+      'translate-x-5': checked,
+      'translate-x-0': !checked
+    }"
   ></span>
 </button>

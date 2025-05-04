@@ -5,6 +5,7 @@ import { ThemingComponent } from './pages/theming/theming.component';
 import { ButtonDocsComponent } from './pages/components/button/button.component';
 import { ToggleDocsComponent } from './pages/components/toggle/toggle.component';
 import { PopoverDocsComponent } from './pages/components/popover/popover.component';
+import { DialogDocsComponent } from './pages/components/dialog/dialog.component';
 
 export const appRoutes: Route[] = [
   {
@@ -16,6 +17,7 @@ export const appRoutes: Route[] = [
       { path: 'components/button', component: ButtonDocsComponent },
       { path: 'components/toggle', component: ToggleDocsComponent },
       { path: 'components/popover', component: PopoverDocsComponent },
+      { path: 'components/dialog', component: DialogDocsComponent },
     ],
   },
   { path: '', redirectTo: '/docs', pathMatch: 'full' },
