@@ -8,7 +8,7 @@ import { CodeComponent } from '../code/code.component';
   imports: [ButtonComponent, CodeComponent],
   template: `
     <div class="prose dark:prose-invert">
-      <h1>Button Component</h1>
+      <h1 class="text-4xl font-bold mb-6">Button Component</h1>
       <p>The Button component is a versatile UI element that can be used for various actions.</p>
       
       <h2>Examples</h2>

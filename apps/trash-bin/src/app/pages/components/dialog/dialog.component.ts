@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   imports: [DialogComponent, CodeComponent, ButtonComponent, FormsModule],
   template: `
     <div class="prose dark:prose-invert">
-      <h1>Dialog Component</h1>
+      <h1 class="text-4xl font-bold mb-6">Dialog Component</h1>
       <p>
         The Dialog component provides a modal dialog that can be used to display
         content or collect user input.

@@ -8,7 +8,7 @@ import { CodeComponent } from '../code/code.component';
   imports: [ToggleComponent, CodeComponent],
   template: `
     <div class="prose dark:prose-invert">
-      <h1>Toggle Component</h1>
+      <h1 class="text-4xl font-bold mb-6">Toggle Component</h1>
       <p>The Toggle component is a switch control that allows users to toggle between two states.</p>
       
       <h2>Examples</h2>
