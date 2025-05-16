@@ -9,7 +9,7 @@ import 'highlight.js/styles/github-dark.css';
   imports: [CommonModule],
   template: `
     <div
-      class="bg-gray-700 dark:bg-gray-800 rounded-lg p-4 my-4 relative group"
+      class="bg-gray-700 dark:bg-gray-800 rounded-lg p-4 relative group"
     >
       <button
         (click)="copyToClipboard()"

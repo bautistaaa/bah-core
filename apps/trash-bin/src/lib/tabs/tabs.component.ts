@@ -109,7 +109,11 @@ export class TabPanelComponent {
 
       <!-- Tab Content -->
       <div
-        class="w-full rounded-md border mt-5 dark:border-zinc-500/50 border-zinc-200"
+        class="w-full rounded-md mt-5"
+        [ngClass]="{
+          'border border-zinc-200 dark:border-zinc-500/50':
+            activeTabIdSignal() !== 'code'
+        }"
       >
         <ng-content></ng-content>
       </div>

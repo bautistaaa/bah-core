@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '@trash-bin/ui/button';
 import { CodeComponent } from '../code/code.component';
-import { TabsComponent, TabPanelComponent } from '../../../../lib/tabs/tabs.component';
+import {
+  TabsComponent,
+  TabPanelComponent,
+} from '../../../../lib/tabs/tabs.component';
 
 @Component({
   selector: 'app-button-docs',
@@ -10,8 +13,11 @@ import { TabsComponent, TabPanelComponent } from '../../../../lib/tabs/tabs.comp
   template: `
     <div class="prose dark:prose-invert">
       <h1 class="text-4xl font-bold mb-6">Button Component</h1>
-      <p>The Button component is a versatile UI element that can be used for various actions.</p>
-      
+      <p>
+        The Button component is a versatile UI element that can be used for
+        various actions.
+      </p>
+
       <h2>Examples</h2>
       <div class="space-y-8">
         <div class="space-y-4">
@@ -27,12 +33,7 @@ import { TabsComponent, TabPanelComponent } from '../../../../lib/tabs/tabs.comp
               </div>
             </app-tab-panel>
             <app-tab-panel id="code">
-              <div class="p-4">
-                <app-code 
-                  [code]="variantsCode" 
-                  [language]="'html'">
-                </app-code>
-              </div>
+              <app-code [code]="variantsCode" [language]="'html'"> </app-code>
             </app-tab-panel>
           </app-tabs>
         </div>
@@ -50,12 +51,7 @@ import { TabsComponent, TabPanelComponent } from '../../../../lib/tabs/tabs.comp
               </div>
             </app-tab-panel>
             <app-tab-panel id="code">
-              <div class="p-4">
-                <app-code 
-                  [code]="sizesCode" 
-                  [language]="'html'">
-                </app-code>
-              </div>
+              <app-code [code]="sizesCode" [language]="'html'"> </app-code>
             </app-tab-panel>
           </app-tabs>
         </div>
@@ -66,12 +62,12 @@ import { TabsComponent, TabPanelComponent } from '../../../../lib/tabs/tabs.comp
 export class ButtonDocsComponent {
   variantTabs = [
     { id: 'preview', label: 'Preview' },
-    { id: 'code', label: 'Code' }
+    { id: 'code', label: 'Code' },
   ];
 
   sizeTabs = [
     { id: 'preview', label: 'Preview' },
-    { id: 'code', label: 'Code' }
+    { id: 'code', label: 'Code' },
   ];
 
   variantsCode = `<lib-button>Primary</lib-button>
@@ -81,4 +77,4 @@ export class ButtonDocsComponent {
   sizesCode = `<lib-button size="sm">Small</lib-button>
 <lib-button size="md">Medium</lib-button>
 <lib-button size="lg">Large</lib-button>`;
-} 
+}
